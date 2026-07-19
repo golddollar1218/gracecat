@@ -3,28 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STOCKCAT — Cats with cash, or cats with stocks?</title>
+    <title>Grace ($GRACE) — The GOATest black cat on the internet</title>
     <meta
       name="description"
-      content="STOCKCAT ($STOCKCAT) — the Robinhood memecoin. Cats with cash, or cats with stocks?"
+      content="Grace ($GRACE) — The GOATest black cat on the internet."
     />
-    <link rel="icon" type="image/webp" href="assets/logo.webp" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- background layers -->
     <canvas id="candle-bg" aria-hidden="true"></canvas>
     <div class="grid-overlay" aria-hidden="true"></div>
     <div class="paw-field" id="paw-field" aria-hidden="true"></div>
     <div class="glow-orb orb-a" aria-hidden="true"></div>
     <div class="glow-orb orb-b" aria-hidden="true"></div>
-    <div class="glow-orb orb-c" aria-hidden="true"></div>
     <div id="cursor-glow" aria-hidden="true"></div>
     <div id="paw-trail" aria-hidden="true"></div>
 
@@ -32,12 +30,8 @@
     <header class="nav" id="nav">
       <div class="nav-inner">
         <a class="brand" href="#hero">
-          <span class="brand-logo-wrap">
-            <img src="assets/logo.webp" alt="STOCKCAT logo" class="brand-logo" />
-            <span class="brand-ear brand-ear-l"></span>
-            <span class="brand-ear brand-ear-r"></span>
-          </span>
-          <span class="brand-name">STOCK<em>CAT</em></span>
+          <img src="assets/logo.png" alt="Grace" class="brand-logo" />
+          <span class="brand-name">Grace</span>
         </a>
         <nav class="nav-links" id="nav-links">
           <a href="#about">About</a>
@@ -48,7 +42,7 @@
         <div class="nav-actions">
           <a
             class="btn btn-ghost btn-small"
-            href="https://x.com/STOCKCAT_X"
+            href="https://x.com/GRACECATRH"
             target="_blank"
             rel="noopener"
           >
@@ -56,10 +50,10 @@
           </a>
           <a
             class="btn btn-primary btn-small"
-            href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0x62A266cB795afbcf54D2198B94e14599F9f7726b"
+            href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xcomingsoon"
             target="_blank"
             rel="noopener"
-            >Buy $STOCKCAT</a
+            >Buy $GRACE</a
           >
         </div>
         <button class="nav-burger" id="nav-burger" aria-label="Menu">
@@ -74,252 +68,120 @@
     <main>
       <!-- ================= HERO ================= -->
       <section class="hero" id="hero">
-        <div class="hero-bg" aria-hidden="true">
-          <img src="assets/banner.png" alt="" class="hero-bg-img" />
-          <div class="hero-bg-veil"></div>
-          <div class="hero-bg-grid"></div>
-        </div>
-
-        <div class="hero-decor" aria-hidden="true">
-          <span class="sparkle sparkle-1"></span>
-          <span class="sparkle sparkle-2"></span>
-          <span class="sparkle sparkle-3"></span>
-          <span class="sparkle sparkle-4"></span>
-          <span class="sparkle sparkle-5"></span>
-          <span class="float-paw fp-1"></span>
-          <span class="float-paw fp-2"></span>
-          <span class="float-paw fp-3"></span>
-          <span class="float-paw fp-4"></span>
-          <span class="float-paw fp-5"></span>
-          <svg class="chart-arrow" viewBox="0 0 280 80" fill="none">
-            <path
-              d="M8 62 C60 58, 90 40, 130 28 C170 16, 210 10, 250 8"
-              stroke="url(#arrowGrad)"
-              stroke-width="4"
-              stroke-linecap="round"
-            />
-            <path d="M238 2 L258 8 L240 22" stroke="#35e65c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <defs>
-              <linearGradient id="arrowGrad" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stop-color="#00c805" stop-opacity="0"/>
-                <stop offset="40%" stop-color="#00c805"/>
-                <stop offset="100%" stop-color="#35e65c"/>
-              </linearGradient>
-            </defs>
-          </svg>
+        <div class="hero-stage" aria-hidden="true">
+          <img
+            src="assets/banner.png"
+            alt=""
+            class="hero-banner"
+          />
+          <div class="hero-veil"></div>
         </div>
 
         <div class="hero-inner">
-          <div class="hero-copy">
-            <div class="hero-badge reveal">
-              <span class="pulse-dot"></span>
-              <img src="assets/icons/paw.svg" alt="" class="badge-paw" />
-              LIVE ON THE MARKET
-            </div>
-            <h1 class="hero-title">
-              <span class="line reveal d1 brand-line">
-                <span class="word-stock">STOCK</span><span class="word-cat">CAT</span>
-              </span>
-              <span class="line reveal d2 tagline-line"
-                >CATS WITH <span class="stroke">CASH,</span></span
-              >
-              <span class="line reveal d3"
-                >OR CATS WITH <span class="green-glow">STOCKS?</span></span
-              >
-            </h1>
-            <p class="hero-sub reveal d4">
-              Meet <strong>STOCKCAT</strong> — the only trader on the floor with
-              four paws, nine lives, and zero stop-losses. He doesn't read
-              charts. He sits on them.
-            </p>
-            <div class="hero-cta reveal d5">
-              <a
-                class="btn btn-primary btn-big btn-purr"
-                href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0x62A266cB795afbcf54D2198B94e14599F9f7726b"
-                target="_blank"
-                rel="noopener"
-              >
-                <img src="assets/icons/uniswap.svg" alt="" class="btn-icon" />
-                Buy on Uniswap
-                <span class="btn-paw" aria-hidden="true"></span>
-              </a>
-              <a
-                class="btn btn-outline btn-big"
-                href="https://dexscreener.com/robinhood/0x62A266cB795afbcf54D2198B94e14599F9f7726b"
-                id="hero-chart-link"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="assets/icons/dexscreener.svg"
-                  alt=""
-                  class="btn-icon"
-                />
-                View Chart
-              </a>
-            </div>
-            <div class="hero-stats reveal d6">
-              <div class="stat">
-                <span class="stat-num" data-count="100" data-suffix="%">0</span>
-                <span class="stat-label">Community Owned</span>
-              </div>
-              <div class="stat-divider"></div>
-              <div class="stat">
-                <span class="stat-num" data-count="9" data-suffix="">0</span>
-                <span class="stat-label">Lives to Trade With</span>
-              </div>
-              <div class="stat-divider"></div>
-              <div class="stat">
-                <span class="stat-num" data-count="0" data-suffix="%">0</span>
-                <span class="stat-label">Taxes. Ever.</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-visual reveal d3">
-            <div class="visual-ring" aria-hidden="true"></div>
-            <div class="visual-ring ring-2" aria-hidden="true"></div>
-            <div class="cat-terminal" id="cat-terminal">
-              <div class="terminal-ears" aria-hidden="true">
-                <span class="term-ear left"></span>
-                <span class="term-ear right"></span>
-              </div>
-              <div class="terminal-head">
-                <span class="term-dot red"></span>
-                <span class="term-dot yellow"></span>
-                <span class="term-dot green"></span>
-                <span class="term-title">STOCKCAT / USD</span>
-                <span class="term-price" id="term-price">$0.0000</span>
-              </div>
-              <canvas id="hero-chart" width="520" height="300"></canvas>
-              <div class="hero-cat-frame">
-                <img
-                  src="assets/logo.webp"
-                  alt="StockCat holding a phone with a green chart"
-                  class="hero-cat float"
-                />
-                <span class="cat-glow"></span>
-              </div>
-              <div class="chip chip-1">
-                <img src="assets/icons/paw.svg" alt="" /> +420.69%
-              </div>
-              <div class="chip chip-2">MEOW CONFIRMED</div>
-              <div class="chip chip-3">
-                <img src="assets/icons/sparkle.svg" alt="" /> BUY SIGNAL
-              </div>
-            </div>
+          <img
+            src="assets/logo.png"
+            alt="Grace — black Scottish Fold"
+            class="hero-logo reveal"
+          />
+          <h1 class="hero-brand reveal d1">Grace</h1>
+          <p class="hero-ticker reveal d1">$GRACE</p>
+          <p class="hero-tagline reveal d2">
+            The GOATest black cat on the internet
+          </p>
+          <div class="hero-cta reveal d3">
+            <a
+              class="btn btn-primary btn-big"
+              href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xcomingsoon"
+              target="_blank"
+              rel="noopener"
+            >
+              <img src="assets/icons/uniswap.svg" alt="" class="btn-icon" />
+              Buy on Uniswap
+            </a>
+            <a
+              class="btn btn-outline btn-big"
+              href="https://dexscreener.com/robinhood/0xcomingsoon"
+              id="hero-chart-link"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="assets/icons/dexscreener.svg"
+                alt=""
+                class="btn-icon"
+              />
+              View Chart
+            </a>
           </div>
         </div>
+
         <div class="scroll-hint" aria-hidden="true">
-          <span class="scroll-paw"></span>
           <span class="scroll-line"></span>
           SCROLL
         </div>
       </section>
 
-      <div class="whisker-divider" aria-hidden="true">
-        <span class="whisker-line"></span>
-        <span class="whisker-paw"></span>
-        <span class="whisker-line"></span>
-      </div>
-
       <!-- ================= ABOUT ================= -->
       <section class="about section" id="about">
-        <div class="section-paw-deco left" aria-hidden="true"></div>
-        <div class="section-paw-deco right" aria-hidden="true"></div>
         <div class="section-inner">
-          <div class="section-tag reveal">
-            <img src="assets/icons/paw.svg" alt="" class="tag-paw" /> ABOUT
-          </div>
+          <div class="section-tag reveal">ABOUT</div>
           <h2 class="section-title reveal">
-            THE CAT THAT <span class="green-glow">NEVER SELLS</span>
+            THE CAT THAT <span class="amber-glow">NEVER SELLS</span>
           </h2>
-          <div class="about-grid">
-            <div class="about-card reveal tilt cat-card">
-              <div class="card-ears" aria-hidden="true">
-                <span></span><span></span>
-              </div>
-              <div class="about-card-icon">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M3 17l5-6 4 4 6-8 3 4"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <h3>Born on the Trading Floor</h3>
-              <p>
-                While other cats chased lasers, STOCKCAT chased green candles.
-                Raised between two monitors and a mechanical keyboard, he
-                learned one thing: the chart only goes up if you purr hard
-                enough.
-              </p>
-              <span class="card-paw-mark" aria-hidden="true"></span>
+          <div class="about-layout">
+            <div class="about-portrait reveal">
+              <img
+                src="assets/logo.png"
+                alt="Grace the black Scottish Fold"
+              />
             </div>
-            <div class="about-card reveal tilt cat-card">
-              <div class="card-ears" aria-hidden="true">
-                <span></span><span></span>
-              </div>
-              <div class="about-card-icon">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M12 2l2.4 6.9H21l-5.5 4.3 2.1 6.8-5.6-4.2-5.6 4.2 2.1-6.8L3 8.9h6.6L12 2z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <h3>Pure Meme. Zero Promises.</h3>
-              <p>
-                No roadmap-to-nowhere. No fake utility. $STOCKCAT is a memecoin
-                for the people who understand that a cat holding a phone with a
-                chart on it is, objectively, the peak of financial engineering.
+            <div class="about-copy">
+              <p class="about-lead reveal d1">
+                <strong>Grace</strong> ($GRACE) — The GOATest black cat on the
+                internet. Amber eyes, diamond paws, and zero stop-losses. She
+                doesn't read charts. She sits on them.
               </p>
-              <span class="card-paw-mark" aria-hidden="true"></span>
-            </div>
-            <div class="about-card reveal tilt cat-card">
-              <div class="card-ears" aria-hidden="true">
-                <span></span><span></span>
+              <div class="about-points">
+                <div class="about-point reveal d2">
+                  <h3>Born on the Floor</h3>
+                  <p>
+                    Raised between two monitors and a mechanical keyboard. The
+                    chart only goes up if you purr hard enough.
+                  </p>
+                </div>
+                <div class="about-point reveal d3">
+                  <h3>Pure Meme. Zero Promises.</h3>
+                  <p>
+                    No roadmap-to-nowhere. No fake utility. $GRACE is for people
+                    who know a round-eyed black cat is peak financial
+                    engineering.
+                  </p>
+                </div>
+                <div class="about-point reveal d4">
+                  <h3>Diamond Paws</h3>
+                  <p>
+                    Liquidity locked, contract renounced, paws on the buy
+                    button. The community holds the bag — and the bag is full of
+                    conviction.
+                  </p>
+                </div>
               </div>
-              <div class="about-card-icon">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M17 9V7a5 5 0 00-10 0v2M5 9h14l-1 11H6L5 9z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <h3>Diamond Paws</h3>
-              <p>
-                Liquidity locked, contract renounced, paws firmly on the buy
-                button. The community holds the bag — and the bag is full of
-                catnip and conviction.
-              </p>
-              <span class="card-paw-mark" aria-hidden="true"></span>
             </div>
           </div>
 
           <div class="token-strip reveal">
-            <div class="token-paw" aria-hidden="true"></div>
             <div class="token-cell">
               <span class="token-label">NAME</span>
-              <span class="token-value">STOCKCAT</span>
+              <span class="token-value">Grace</span>
             </div>
             <div class="token-cell">
-              <span class="token-label">SYMBOL</span>
-              <span class="token-value">$STOCKCAT</span>
+              <span class="token-label">TICKER</span>
+              <span class="token-value">$GRACE</span>
             </div>
             <div class="token-cell token-ca">
               <span class="token-label">CONTRACT</span>
               <span class="token-value mono" id="contract-address"
-                >0x62A266cB795afbcf54D2198B94e14599F9f7726b</span
+                >0xcomingsoon</span
               >
             </div>
             <button class="btn btn-primary btn-small" id="copy-ca">COPY</button>
@@ -327,39 +189,26 @@
         </div>
       </section>
 
-      <div class="whisker-divider" aria-hidden="true">
-        <span class="whisker-line"></span>
-        <span class="whisker-paw"></span>
-        <span class="whisker-line"></span>
-      </div>
-
       <!-- ================= HOW TO BUY ================= -->
       <section class="howtobuy section" id="howtobuy">
         <div class="section-inner">
-          <div class="section-tag reveal">
-            <img src="assets/icons/paw.svg" alt="" class="tag-paw" /> HOW TO BUY
-          </div>
+          <div class="section-tag reveal">HOW TO BUY</div>
           <h2 class="section-title reveal">
-            FOUR STEPS TO <span class="green-glow">CATHOOD</span>
+            FOUR STEPS TO <span class="amber-glow">GRACE</span>
           </h2>
           <div class="steps">
             <div class="step reveal">
-              <div class="step-num">
-                <span class="step-paw"></span>01
-              </div>
+              <div class="step-num">01</div>
               <div class="step-body">
                 <h3>Get a Wallet</h3>
                 <p>
                   Download MetaMask or your favorite wallet. Guard your seed
-                  phrase like a cat guards the warm spot on the couch.
+                  phrase like Grace guards the warm spot on the couch.
                 </p>
               </div>
-              <div class="step-glow"></div>
             </div>
             <div class="step reveal">
-              <div class="step-num">
-                <span class="step-paw"></span>02
-              </div>
+              <div class="step-num">02</div>
               <div class="step-body">
                 <h3>Load Up on ETH</h3>
                 <p>
@@ -367,39 +216,32 @@
                   the tuna you'll trade for the cat.
                 </p>
               </div>
-              <div class="step-glow"></div>
             </div>
             <div class="step reveal">
-              <div class="step-num">
-                <span class="step-paw"></span>03
-              </div>
+              <div class="step-num">03</div>
               <div class="step-body">
                 <h3>Swap on Uniswap</h3>
                 <p>
-                  Head to Uniswap, paste the $STOCKCAT contract address, and
-                  swap. Slow blinks recommended while the transaction confirms.
+                  Head to Uniswap, paste the $GRACE contract address, and swap.
+                  Slow blinks recommended while the transaction confirms.
                 </p>
               </div>
-              <div class="step-glow"></div>
             </div>
             <div class="step reveal">
-              <div class="step-num">
-                <span class="step-paw"></span>04
-              </div>
+              <div class="step-num">04</div>
               <div class="step-body">
                 <h3>Hold and Purr</h3>
                 <p>
-                  Welcome to the clowder. Add $STOCKCAT to your wallet, watch
-                  the candles, and never let the dog walkers shake you out.
+                  Welcome to the clowder. Add $GRACE to your wallet, watch the
+                  candles, and never let the dog walkers shake you out.
                 </p>
               </div>
-              <div class="step-glow"></div>
             </div>
           </div>
           <div class="howtobuy-cta reveal">
             <a
-              class="btn btn-primary btn-big btn-purr"
-              href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0x62A266cB795afbcf54D2198B94e14599F9f7726b"
+              class="btn btn-primary btn-big"
+              href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xcomingsoon"
               target="_blank"
               rel="noopener"
             >
@@ -413,11 +255,9 @@
       <!-- ================= CHART ================= -->
       <section class="chart section" id="chart">
         <div class="section-inner">
-          <div class="section-tag reveal">
-            <img src="assets/icons/paw.svg" alt="" class="tag-paw" /> CHART
-          </div>
+          <div class="section-tag reveal">CHART</div>
           <h2 class="section-title reveal">
-            WATCH THE <span class="green-glow">CANDLES</span> GROW CLAWS
+            WATCH THE <span class="amber-glow">CANDLES</span>
           </h2>
           <div class="chart-frame reveal">
             <div class="chart-frame-head">
@@ -426,7 +266,7 @@
                 alt=""
                 class="chart-head-icon"
               />
-              <span>DEXSCREENER — STOCKCAT LIVE</span>
+              <span>DEXSCREENER — Grace LIVE</span>
               <span class="chart-live"
                 ><span class="pulse-dot"></span> LIVE</span
               >
@@ -434,102 +274,74 @@
             <div class="chart-embed">
               <iframe
                 id="dexscreener-embed"
-                src="https://dexscreener.com/robinhood/0x62A266cB795afbcf54D2198B94e14599F9f7726b?embed=1&theme=dark&trades=0&info=0"
-                title="STOCKCAT chart on Dexscreener"
+                src="https://dexscreener.com/robinhood/0xcomingsoon?embed=1&theme=dark&trades=0&info=0"
+                title="Grace chart on Dexscreener"
                 loading="lazy"
                 allow="clipboard-write"
               ></iframe>
             </div>
-            <div class="chart-paw-corner" aria-hidden="true"></div>
           </div>
           <p class="chart-note reveal">
-            Chart loads directly from
+            Chart loads from
             <a
-              href="https://dexscreener.com/robinhood/0x62A266cB795afbcf54D2198B94e14599F9f7726b"
+              href="https://dexscreener.com/robinhood/0xcomingsoon"
               id="chart-outlink"
               target="_blank"
               rel="noopener"
               >Dexscreener</a
-            >. Once $STOCKCAT is live, the pair appears here automatically.
+            >. Once $GRACE is live, the pair appears here automatically.
           </p>
         </div>
       </section>
 
-      <div class="whisker-divider" aria-hidden="true">
-        <span class="whisker-line"></span>
-        <span class="whisker-paw"></span>
-        <span class="whisker-line"></span>
-      </div>
-
       <!-- ================= JOIN US ================= -->
       <section class="joinus section" id="joinus">
         <div class="section-inner">
-          <div class="section-tag reveal">
-            <img src="assets/icons/paw.svg" alt="" class="tag-paw" /> JOIN US
-          </div>
+          <div class="section-tag reveal">JOIN US</div>
           <h2 class="section-title reveal">
-            THE CLOWDER IS <span class="green-glow">CALLING</span>
+            THE CLOWDER IS <span class="amber-glow">CALLING</span>
           </h2>
           <div class="joinus-banner reveal">
             <img
               src="assets/banner.png"
-              alt="STOCKCAT banner — cat holding a phone with a rising chart"
+              alt="Grace — tiled black cat banner"
             />
-            <div class="banner-shine"></div>
-            <div class="banner-sparkles" aria-hidden="true">
-              <span></span><span></span><span></span><span></span>
-            </div>
-            <div class="banner-frame-paws" aria-hidden="true">
-              <span class="bfp bfp-tl"></span>
-              <span class="bfp bfp-tr"></span>
-              <span class="bfp bfp-bl"></span>
-              <span class="bfp bfp-br"></span>
-            </div>
           </div>
           <p class="joinus-sub reveal">
-            Cash is temporary. Stocks are temporary. Cats are forever. Follow
-            the ticker, join the feed, and claim your seat on the trading desk.
+            The GOATest black cat on the internet. Follow $GRACE, join the feed,
+            and claim your seat next to Grace.
           </p>
           <div class="social-row reveal">
             <a
-              class="social-card cat-card"
-              href="https://x.com/STOCKCAT_X"
+              class="social-link"
+              href="https://x.com/GRACECATRH"
               target="_blank"
               rel="noopener"
             >
-              <div class="card-ears" aria-hidden="true">
-                <span></span><span></span>
-              </div>
-              <img src="assets/icons/x.svg" alt="X" />
+              <img src="assets/icons/x.svg" alt="" />
               <span class="social-name">X / TWITTER</span>
-              <span class="social-handle">@STOCKCAT_X</span>
+              <span class="social-handle">@GRACECATRH</span>
             </a>
             <a
-              class="social-card cat-card"
-              href="https://dexscreener.com/robinhood/0x62A266cB795afbcf54D2198B94e14599F9f7726b"
+              class="social-link"
+              href="https://dexscreener.com/robinhood/0xcomingsoon"
               id="social-dex"
               target="_blank"
               rel="noopener"
             >
-              <div class="card-ears" aria-hidden="true">
-                <span></span><span></span>
-              </div>
-              <img src="assets/icons/dexscreener.svg" alt="Dexscreener" />
+              <img src="assets/icons/dexscreener.svg" alt="" />
               <span class="social-name">DEXSCREENER</span>
               <span class="social-handle">Live Chart</span>
             </a>
             <a
-              class="social-card cat-card"
-              href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0x62A266cB795afbcf54D2198B94e14599F9f7726b"
+              class="social-link"
+              href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xcomingsoon"
               target="_blank"
               rel="noopener"
             >
-              <div class="card-ears" aria-hidden="true">
-                <span></span><span></span>
-              </div>
-              <img src="assets/icons/uniswap.svg" alt="Uniswap" />
+              <img src="assets/icons/uniswap.svg" alt="" />
               <span class="social-name">UNISWAP</span>
-              <span class="social-handle">Swap $STOCKCAT</span>
+              <span class="social-handle">Swap $GRACE</span>
             </a>
           </div>
         </div>
@@ -538,33 +350,26 @@
 
     <!-- ================= FOOTER ================= -->
     <footer class="footer">
-      <div class="footer-paws" aria-hidden="true">
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
       <div class="footer-inner">
         <div class="footer-brand">
-          <span class="brand-logo-wrap">
-            <img src="assets/logo.webp" alt="STOCKCAT logo" />
-            <span class="brand-ear brand-ear-l"></span>
-            <span class="brand-ear brand-ear-r"></span>
-          </span>
-          <span>STOCK<em>CAT</em></span>
+          <img src="assets/logo.png" alt="Grace" />
+          <span class="brand-name">Grace</span>
         </div>
         <p class="footer-disclaimer">
-          $STOCKCAT is a memecoin with no intrinsic value and no expectation of
+          $GRACE is a memecoin with no intrinsic value and no expectation of
           financial return. It exists purely for entertainment. Cats cannot give
           financial advice. Do your own research.
         </p>
         <div class="footer-socials">
           <a
-            href="https://x.com/STOCKCAT_X"
+            href="https://x.com/GRACECATRH"
             target="_blank"
             rel="noopener"
             aria-label="X"
             ><img src="assets/icons/x.svg" alt="X"
           /></a>
           <a
-            href="https://dexscreener.com/robinhood/0x62A266cB795afbcf54D2198B94e14599F9f7726b"
+            href="https://dexscreener.com/robinhood/0xcomingsoon"
             id="footer-dex"
             target="_blank"
             rel="noopener"
@@ -572,14 +377,14 @@
             ><img src="assets/icons/dexscreener.svg" alt="Dexscreener"
           /></a>
           <a
-            href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0x62A266cB795afbcf54D2198B94e14599F9f7726b"
+            href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xcomingsoon"
             target="_blank"
             rel="noopener"
             aria-label="Uniswap"
             ><img src="assets/icons/uniswap.svg" alt="Uniswap"
           /></a>
         </div>
-        <p class="footer-copy">© 2026 STOCKCAT. All paws reserved.</p>
+        <p class="footer-copy">© 2026 Grace. All paws reserved.</p>
       </div>
     </footer>
 
