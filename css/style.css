@@ -585,17 +585,7 @@ body {
 
 /* ---------- ticker ---------- */
 .ticker-tape {
-  border-top: 1px solid var(--line-soft);
-  overflow: hidden;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 200, 5, 0.1),
-    rgba(0, 200, 5, 0.03),
-    rgba(245, 184, 66, 0.06)
-  );
-  height: 32px;
-  display: flex;
-  align-items: center;
+  display: none;
 }
 .ticker-track {
   display: flex;
@@ -1330,7 +1320,7 @@ body {
 @media (max-width: 800px) {
   .nav-links {
     position: fixed;
-    top: calc(var(--nav-h) + 32px + var(--frame));
+    top: calc(var(--nav-h) + var(--frame));
     right: 0;
     flex-direction: column;
     background: rgba(7, 10, 8, 0.97);
